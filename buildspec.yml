@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - flake8 lambda_function.py --max-line-length=120
+      - python -m pytest tests/
+artifacts:
+  files:
+    - 'app_template.yaml'
+    - 'lambda_function.py'
+    - 'requirements.txt'
