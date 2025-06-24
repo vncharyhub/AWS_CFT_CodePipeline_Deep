@@ -1,0 +1,4 @@
+boto3
+aws-sam-cli
+flake8
+pytest
